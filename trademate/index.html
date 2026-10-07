@@ -73,26 +73,26 @@
       <div class="shell demo-shell">
         <div class="demo-copy reveal">
           <div class="eyebrow light">Explore TradeMate</div>
-          <h2>Questions you know.<br>A new way to answer.</h2>
-          <p>Choose an enquiry to see how TradeMate could guide the conversation.</p>
-          <p class="demo-note">Interactive examples with sample products, prices and availability. Responses are prepared, not generated live.</p><div class="prompt-list" role="group" aria-label="Demo prompts">
-            <button class="prompt active" data-scenario="patio" type="button">I need materials for a 25m² patio</button>
-            <button class="prompt" data-scenario="insulation" type="button">Have you got 100mm PIR?</button>
-            <button class="prompt" data-scenario="repeat" type="button">I bought this last month — send me the same again</button>
-            <button class="prompt" data-scenario="alternative" type="button">What’s the cheaper alternative?</button>
+          <h2>Find the materials.<br>Move the job forward.</h2>
+          <p>From tile adhesive to timbercare, see how products and practical questions come together.</p>
+          <p class="demo-note" id="chat-description">Browse a sample catalogue from our trade-counter assistant. Prices are illustrative, excluding VAT; stock and ordering are not connected.</p>
+          <div class="prompt-list" role="group" aria-label="Browse sample products">
+            <button class="prompt active" data-topic="all" type="button" aria-pressed="true">Browse products</button>
+            <button class="prompt" data-topic="tiling" type="button" aria-pressed="false">Tiling a bathroom</button>
+            <button class="prompt" data-topic="garden" type="button" aria-pressed="false">Garden and paving</button>
+            <button class="prompt" data-topic="tools" type="button" aria-pressed="false">Tools for the job</button>
           </div>
         </div>
-
         <div class="demo-panel reveal reveal-delay">
-          <div class="demo-toolbar">
-            <div><span class="status-dot"></span> TradeMate · illustrative demo</div>
-            <span id="demo-status">Ready</span>
-          </div>
-          <div class="demo-chat" id="demo-chat" aria-live="polite"></div>
-          <div class="demo-composer">
-            <input id="demo-input" type="text" value="I need materials for a 25m² patio" aria-label="Demo question" />
-            <button id="demo-send" aria-label="Send demo question" type="button">Send</button>
-          </div>
+          <div class="demo-toolbar"><strong>TradeMate</strong><span id="demo-status" role="status">Catalogue preview</span></div>
+          <div class="demo-chat" id="demo-chat" role="log" aria-label="TradeMate conversation" aria-live="polite"></div>
+          <form class="demo-composer" id="chat-form" hidden>
+            <input id="demo-input" type="text" maxlength="2000" placeholder="Tell us about your job…" aria-label="Your message to TradeMate" autocomplete="off" aria-describedby="chat-privacy" />
+            <button id="demo-send" type="submit">Send</button>
+          </form>
+          <p class="chat-caption" id="chat-privacy">Live chat is not available in this preview. <button class="chat-book js-open-demo-modal" type="button">Book a guided demo</button></p>
+          <button id="chat-reset" class="chat-reset" type="button" hidden>Start a new conversation</button>
+          <noscript><p>Enable JavaScript to browse the catalogue, or email info@firespoon.ie for a demo.</p></noscript>
         </div>
       </div>
     </section>
@@ -165,4 +165,4 @@
         </div>
       </div>
     </section>
-  </main><footer class="footer shell"><a class="footer-brand" href="/" aria-label="Firespoon home"><img src="/firespoon-wordmark.svg" alt="Firespoon" width="118" height="37"></a><nav class="footer-nav" aria-label="Footer navigation"><a href="/trademate/">TradeMate</a><a href="/#team">Team</a><a href="mailto:info@firespoon.ie">Contact</a></nav><div class="footer-details"><address>The Cranford Centre, Montrose<br>Dublin 4, D04 X6H0, Ireland</address><p>© <span id="year"></span> Firespoon Ltd.</p></div></footer><dialog class="dialog-native" id="demo-modal" aria-labelledby="modal-title"><div class="modal-content"><button class="modal-close-btn" type="button" aria-label="Close booking form">×</button><div id="form-view"><h2 id="modal-title">See TradeMate at work.</h2><p>Tell us a little about your business. We’ll arrange a free, 15-minute demo.</p><form id="demo-form"><div class="form-group"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required maxlength="120"></div><div class="form-group"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254"></div><div class="form-group"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="40"></div><div class="form-group"><label for="company-input">Business name</label><input id="company-input" name="company" autocomplete="organization" required maxlength="200"></div><button class="modal-submit-btn" id="submit-btn" type="submit">Request a TradeMate demo</button><p id="form-status" role="status"></p><p class="privacy-note">Your details will be sent to Firespoon to arrange your demo. Prefer email? <a href="mailto:info@firespoon.ie">info@firespoon.ie</a></p></form></div><div id="success-view" hidden><h2>Thank you.</h2><p>We’ve received your request. The Firespoon team will contact you to arrange a TradeMate demo.</p><button class="btn btn-dark" id="modal-done-btn" type="button">Done</button></div></div></dialog><script src="/site.js" defer></script><script src="/demo.js" defer></script></body></html>
+  </main><footer class="footer shell"><a class="footer-brand" href="/" aria-label="Firespoon home"><img src="/firespoon-wordmark.svg" alt="Firespoon" width="118" height="37"></a><nav class="footer-nav" aria-label="Footer navigation"><a href="/trademate/">TradeMate</a><a href="/#team">Team</a><a href="mailto:info@firespoon.ie">Contact</a></nav><div class="footer-details"><address>The Cranford Centre, Montrose<br>Dublin 4, D04 X6H0, Ireland</address><p>© <span id="year"></span> Firespoon Ltd.</p></div></footer><dialog class="dialog-native" id="demo-modal" aria-labelledby="modal-title"><div class="modal-content"><button class="modal-close-btn" type="button" aria-label="Close booking form">×</button><div id="form-view"><h2 id="modal-title">See TradeMate at work.</h2><p>Tell us a little about your business. We’ll arrange a free, 15-minute demo.</p><form id="demo-form"><div class="form-group"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required maxlength="120"></div><div class="form-group"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254"></div><div class="form-group"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="40"></div><div class="form-group"><label for="company-input">Business name</label><input id="company-input" name="company" autocomplete="organization" required maxlength="200"></div><button class="modal-submit-btn" id="submit-btn" type="submit">Request a TradeMate demo</button><p id="form-status" role="status"></p><p class="privacy-note">Your details will be sent to Firespoon to arrange your demo. Prefer email? <a href="mailto:info@firespoon.ie">info@firespoon.ie</a></p></form></div><div id="success-view" hidden><h2>Thank you.</h2><p>We’ve received your request. The Firespoon team will contact you to arrange a TradeMate demo.</p><button class="btn btn-dark" id="modal-done-btn" type="button">Done</button></div></div></dialog><script src="/site.js" defer></script><script src="/demo.js" type="module"></script></body></html>
